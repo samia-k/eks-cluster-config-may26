@@ -38,6 +38,7 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
+//needs fixing, not being properly associated with nat gw
 resource "aws_eip" "nat" {
   domain     = "vpc"
   depends_on = [aws_internet_gateway.igw]

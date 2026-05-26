@@ -1,5 +1,6 @@
 name_prefix = "eks-may26"
 
+#vpc and subnets
 vpc_cidr = "10.0.0.0/16"
 
 public_subnet = {
@@ -29,3 +30,7 @@ private_subnet = {
     availability_zone       = "eu-west-2b"
   }
 }
+
+#eks cluster config
+eks_version = 1.35
+authentication_mode = "API_AND_CONFIG_MAP"
