@@ -10,10 +10,14 @@ variable "eks_version" {
   type = number
 }
 
-variable "subnet_ids" {
+variable "private_subnet_ids" {
   type = any
 }
 
 variable "eks_policy_attachment" {
+  type = string
+}
+
+variable "eks_cluster_role" {
   type = string
 }

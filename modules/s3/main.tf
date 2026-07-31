@@ -60,14 +60,14 @@ resource "aws_s3_bucket_lifecycle_configuration" "lifecycle_policy" {
     filter {}
 
     transition {
-      days = 90
+      days          = 90
       storage_class = "STANDARD_IA"
     }
 
     transition {
-      days = 365
+      days          = 365
       storage_class = "DEEP_ARCHIVE"
-    }    
+    }
 
     expiration {
       days = 2555

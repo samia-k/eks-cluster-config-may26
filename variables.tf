@@ -14,6 +14,10 @@ variable "private_subnet" {
   type = any
 }
 
+# variable "private_subnet_ids" {
+#   type = any
+# }
+
 variable "enable_dns_hostnames" {
   type    = bool
   default = true
@@ -23,22 +27,6 @@ variable "enable_dns_support" {
   type    = bool
   default = true
 }
-
-# variable "authentication_mode" {
-#   type    = string
-# }
-
-# variable "eks_version" {
-#   type    = number
-# }
-
-# variable "subnet_ids" {
-#   type    = any
-# }
-
-# variable "eks_policy_attachment" {
-#   type = string
-# }
 
 variable "application" {
   type = string
@@ -65,4 +53,12 @@ variable "deletion_window_in_days" {
 
 variable "rotation_period_in_days" {
   type = number
+}
+
+variable "eks_version" {
+  type = number
+}
+
+variable "authentication_mode" {
+  type = string
 }

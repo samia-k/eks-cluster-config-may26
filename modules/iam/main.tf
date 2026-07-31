@@ -1,7 +1,5 @@
-//needs changing
-
-resource "aws_iam_role" "cluster" {
-  name = "eks-cluster-example"
+resource "aws_iam_role" "eks_cluster_role" {
+  name = "${var.name_prefix}-cluster-role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -21,5 +19,5 @@ resource "aws_iam_role" "cluster" {
 
 resource "aws_iam_role_policy_attachment" "cluster_AmazonEKSClusterPolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
-  role       = aws_iam_role.cluster.name
+  role       = aws_iam_role.eks_cluster_role.name
 }
